@@ -175,22 +175,14 @@ const posts = await useSanityClient().fetch(`*[_type == "post"]`);
 				</div>
 			</div>
 			<div class="shrink-[0.5] max-md:px-16">
-				<button class="block w-full mb-4 bg-[#300C35] text-3xl text-white px-16 py-4 rounded-xl font-bold">
+				<button class="block w-full mb-4 bg-[#300C35] text-2xl text-white px-16 py-4 rounded-xl font-bold">
 					Contact Us
 				</button>
-				<button class="block w-full mt-4 bg-[#300C35] text-3xl text-white px-16 py-4 rounded-xl font-bold">
+				<button class="block w-full mt-4 bg-[#300C35] text-2xl text-white px-16 py-4 rounded-xl font-bold">
 					Join Our Community
 				</button>
 			</div>
 		</div>
-
-		{posts && <ul>
-			{posts.map((post) => (
-				<li><a href={'post/' + post.slug.current}>{post.title}</a></li>
-			))}
-		</ul>}
-
-
 	</body>
 </html>
 
