@@ -1,0 +1,205 @@
+---
+import { useSanityClient } from '@sanity/astro';
+import '@fontsource/inika/400.css';
+import '@fontsource/inika/700.css';
+
+import { Icon } from 'astro-icon';
+
+const posts = await useSanityClient().fetch(`*[_type == "post"]`);
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Ghost Gadot</title>
+	</head>
+	<body>
+		<nav class="flex flex-row bg-[#300C35] h-20 px-8 text-white text-md items-center">
+			<div class="my-auto w-12 mr-4 aspect-square bg-[#FFEEC3] rounded-full">
+
+			</div>
+			<h1 class="my-auto text-[#FFEEC3] font-serif antialiased font-bold text-xl leading-snug w-min">
+				GHOST GADOT
+			</h1>
+
+			<div class="flex flex-row gap-8 mx-auto">
+				<a>Platforms</a>
+				<a>Collective Store</a>
+				<a>Commercial Services</a>
+				<a>Personal Services</a>
+				<a>About Us</a>
+			</div>
+
+			<button class="bg-[#FFEEC3] text-black font-extrabold px-4 py-0.5 rounded-full">
+				Contact Us
+			</button>
+		</nav>
+
+		<div class="bg-[#370E3D] py-40 w-full text-center">
+			<div class="flex flex-row items-center justify-center h-full">
+				<div class="flex flex-col items-center justify-center text-white font-extralight text-5xl gap-3 px-8">
+					<h1 class="font-serif antialiased leading-tight">
+						A <span class="font-semibold">collective, brokerage,</span> and <span class="font-semibold">marketplace</span><br>
+						for all of your <span class="underline underline-offset-4 text-[#FFEEC3]">digital design</span> needs.
+					</h1>
+
+					<div class="mt-6 flex flex-row justify-center gap-8">
+						<button class="py-2 px-8 text-2xl font-medium bg-black bg-opacity-20 rounded-full border-2 border-transparent hover:border-2 hover:border-fuchsia-900">
+							Our Services
+						</button>
+						<button class="py-2 px-8 text-2xl font-medium bg-black bg-opacity-20 rounded-full border-2 border-transparent hover:border-2 hover:border-fuchsia-900">
+							Our Community
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="flex flex-row gap-[8vw] justify-center items-center bg-[#FFF8E5] min-h-[26rem] w-full py-12 px-16 max-md:flex-col">
+			<div class="text-lg">
+				<h2 class="text-3xl max-w-[32rem] font-serif antialiased">
+					We're empowering the <span class="underline underline-offset-2 decoration-2 font-bold text-purple-950">community,</span> one problem at a time.
+				</h2>
+				
+				<ul class="list-disc list-inside marker:text-[#370E3D] my-4">
+					<li>
+						Ensuring the financial security of transactions
+					</li>
+					<li>
+						Promoting professional services
+					</li>
+					<li>
+						Collectivizing artistic resources
+					</li>
+				</ul>
+
+				<p class="max-w-[32rem]">
+					Okay, so what if it’s three problems? Sue us. We embrace challenges and
+					turn them into opportunities for greater success.
+				</p>	
+			</div>
+			<div class="shrink-[0.5] max-md:px-16">
+				<img class="" src="https://placehold.jp/400x300.png"/>
+			</div>
+		</div>
+
+		<div class="bg-white min-h-[14rem] w-full py-12 px-16 max-md:px-2">
+			<h1 class="font-serif antialiased font-bold text-3xl text-[#370E3D] text-center">We've made lots (and lots) of clients happy.</h1>
+			<div class="flex flex-row flex-wrap justify-center gap-16 text-lg w-full px-14 mt-8 max-md:px-2">
+				<img class="max-md:w-1/4 " src="https://placehold.jp/150x150.png"/>
+				<img class="max-md:w-1/4 " src="https://placehold.jp/150x150.png"/>
+				<img class="max-md:w-1/4 " src="https://placehold.jp/150x150.png"/>
+				<img class="max-md:w-1/4 " src="https://placehold.jp/150x150.png"/>
+				<img class="max-md:w-1/4 " src="https://placehold.jp/150x150.png"/>
+			</div>
+		</div>
+
+		<div class="flex flex-row gap-[8vw] justify-center items-center bg-[#FFF8E5] min-h-[26rem] w-full py-12 px-16 max-md:flex-col">
+			<div class="text-lg">
+				<h2 class="text-3xl max-w-[32rem] font-serif antialiased">
+					Our Vision + Values
+				</h2>
+
+				<p class="max-w-[32rem]">
+					Ramps thundercats hot chicken cliche banjo. Next level occupy DIY unicorn craft beer lo-fi taiyaki  pour-over truffaut selfies normcore. 
+					Yuccie YOLO bespoke kombucha you probably haven't heard of them, knausgaard glossier twee vexillologist migas plaid gatekeep. Kogi crucifix enamel pin, venmo austin fanny pack post-ironic ramps vibecession af whatever tumeric.
+				</p>	
+			</div>
+			<div class="shrink-[0.5] max-md:px-16">
+				<img class="" src="https://placehold.jp/400x300.png"/>
+			</div>
+		</div>
+
+		<div class="bg-[#370E3D] min-h-[26rem] w-full py-12">
+			<div class="text-lg text-[#FFEEC3] px-32 max-md:px-8 max-md:text-center">
+				<h2 class="text-4xl max-w-[32rem] max-md:max-w-none font-serif antialiased">
+					We’re think we’re pretty great, and these folks agree.
+				</h2>
+			</div>
+
+			<div class="mt-8 flex flex-row flex-wrap justify-center gap-16 gap-y-8 max-md:flex-col">
+				<div class="bg-white max-w-[24rem] px-12 py-6 rounded-2xl max-md:mx-auto">
+					<h3 class="text-xl font-bold">
+						Swag Master
+					</h3>
+					<p class="text-lg after:content-['★_★_★_★_★'] text-yellow-400">
+					</p>
+					<p class="">
+						aodnao oa dwa ohuaoda ouwdan d
+						awda dawasdsasd asdpij aidjw adw
+						awdad ijjasdij ligma wigma sigma
+					</p>
+				</div>
+				<div class="bg-white max-w-[24rem] px-12 py-6 rounded-2xl max-md:mx-auto">
+					<h3 class="text-xl font-bold">
+						Swag Master
+					</h3>
+					<p class="text-lg after:content-['★_★_★_★_★'] text-yellow-400">
+					</p>
+					<p class="">
+						aodnao oa dwa ohuaoda ouwdan d
+						awda dawasdsasd asdpij aidjw adw
+						awdad ijjasdij ligma wigma sigma
+					</p>
+				</div>
+				<div class="bg-white max-w-[24rem] px-12 py-6 rounded-2xl max-md:mx-auto">
+					<h3 class="text-xl font-bold">
+						Swag Master
+					</h3>
+					<p class="text-lg after:content-['★_★_★_★_★'] text-yellow-400">
+					</p>
+					<p class="">
+						aodnao oa dwa ohuaoda ouwdan d
+						awda dawasdsasd asdpij aidjw adw
+						awdad ijjasdij ligma wigma sigma
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="flex flex-row gap-[8vw] justify-center items-center bg-white min-h-[26rem] w-full py-12 px-16 max-md:flex-col">
+			<div class="text-lg text-[#370E3D]">
+				<h2 class="text-5xl max-w-[42rem] font-serif antialiased leading-[1.25]">
+					<span class="font-bold">Let's talk about your project.</span>
+					<br>We won't spook you.
+				</h2>
+				<div class="flex flex-row h-12 gap-6 mt-3 text-black">
+					<Icon pack="bi" name="discord" />
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2L487 464H345L233.7 318.6L106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42l255.3 333.8z"/></svg>
+					<Icon pack="bi" name="instagram" class="p-0.5" />
+					<Icon pack="bi" name="linkedin" class="p-0.5" />
+					<Icon pack="bi" name="envelope" />
+				</div>
+			</div>
+			<div class="shrink-[0.5] max-md:px-16">
+				<button class="block w-full mb-4 bg-[#300C35] text-3xl text-white px-16 py-4 rounded-xl font-bold">
+					Contact Us
+				</button>
+				<button class="block w-full mt-4 bg-[#300C35] text-3xl text-white px-16 py-4 rounded-xl font-bold">
+					Join Our Community
+				</button>
+			</div>
+		</div>
+
+		{posts && <ul>
+			{posts.map((post) => (
+				<li><a href={'post/' + post.slug.current}>{post.title}</a></li>
+			))}
+		</ul>}
+
+
+	</body>
+</html>
+
+<style is:global>
+	@font-face {
+	  font-family: 'Inika';
+	  src: url('/fonts/Inika-Regular.ttf') format('ttf');
+	  font-weight: normal;
+	  font-style: normal;
+	  font-display: swap;
+	}
+</style>
