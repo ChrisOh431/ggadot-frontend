@@ -1,0 +1,108 @@
+---
+import { useSanityClient } from "@sanity/astro";
+import "@fontsource/inika/400.css";
+import "@fontsource/inika/700.css";
+
+import BasicSection from "../components/BasicSection.astro";
+import NavBar from "../components/NavBar.astro";
+import LinkButton from "../components/LinkButton.astro";
+import BigFooter from "../components/BigFooter.astro";
+import HeroSection from "../components/HeroSection.astro";
+import SectionButton from "../components/SectionButton.astro";
+
+import sideBySide from "../images/illust/side-by-side.svg";
+import checks from "../images/illust/checks.svg";
+import certMan from "../images/illust/man-with-cert.svg";
+import { Image } from "astro:assets";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout heroBackgroundOverride navVariant="dark">
+  <div slot="hero" class="text-4xl lg:text-5xl lg:max-w-5xl">
+    <h2 class="font-serif font-semibold antialiased leading-tight">
+      Three Platforms. <span class="underline text-ggviolet-highlight">One Mission.</span>
+    </h2>
+    <p class="text-lg lg:text-xl mx-auto max-w-xl lg:max-w-3xl text-center lg:px-4">
+      In our vibrant artistic ecosystem, we bring together three distinctive platforms,
+      each serving a unique purpose yet all aligned under one powerful mission. We are an <span
+        class="text-ggyellow-primary">artist collective,</span
+      > a trusted <span class="text-ggyellow-primary">art brokerage,</span>
+       and a thriving <span class="text-ggyellow-primary">art marketplace.</span>
+    </p>
+  </div>
+
+  <BasicSection sectionTitle="Our Collective">
+    <p class="text-lg max-w-[32rem]">
+      Other companies hold back, but we believe in sharing the secret sauce - it's all
+      about the collective power. Our Think-Tank, powerhouse, and action committee, Ghost
+      Gadot's Collective is the dynamic driver of our growth. Not the type of growth you'd
+      find on a profit chart, but the facilitated expansion of pure, unadulterated talent.
+
+
+      <br />
+      <br />
+
+       Intrigued? Our fancy words are working. Click below and check opportunities to join
+      us and uncover what's behind the scenes.
+    </p>
+    <div class="mt-4 w-full flex flex-col items-center lg:flex-row gap-4">
+      <SectionButton destination="/contact">Collective Season Drops</SectionButton>
+      <SectionButton destination="/about">Meet The Team</SectionButton>
+    </div>
+    <Image
+      src={sideBySide}
+      alt="2 people side by side."
+      slot="content"
+      class="w-full h-full max-w-md"
+    />
+  </BasicSection>
+
+  <BasicSection reversed sectionTitle="The Brokerage">
+    <p class="text-lg max-w-[32rem]">
+      Our talent pool isn't a stagnant pond, but a reservoir brimming with evolving
+      skills, growing in tandem with the ever-changing creative landscape. Be it
+      commercial or personal, illustration or design, Ghost Gadot delivers with panache.
+    </p>
+    <div class="mt-4 w-full flex flex-col items-center lg:flex-row gap-4">
+      <SectionButton destination="/contact">Business Brokerage</SectionButton>
+      <SectionButton destination="/contact">Brokerage For Individuals</SectionButton>
+    </div>
+    <Image
+      src={checks}
+      alt="A person pleased with the results from their computer."
+      slot="content"
+      class="w-full h-full max-w-md"
+    />
+  </BasicSection>
+
+  <BasicSection sectionTitle="The Marketplace">
+    <p class="text-lg max-w-[32rem]">
+      The <strong>only</strong> ethical marketplace for Artists. Other marketplaces are
+      broad and wide reaching to encompass as many lines of revenue as possible, we
+      aren't. Ghost Gadot is <strong>for artists and by artists.</strong>
+      <br />
+      <br />
+
+       Quality over Quantity is what our marketplace stands for. We don't overwork our artists,
+      which means they aren't forced to make poor business decisions to keep up their numbers.
+      Unlike other marketplaces, Ghost Gadot can promise your commissions are 100% original
+      & 100% ethically sourced.
+    </p>
+    <div class="mt-4 w-full flex flex-col items-center lg:flex-row gap-4">
+      <SectionButton destination="/contact">Find An Artist</SectionButton>
+    </div>
+    <Image
+      src={certMan}
+      alt="A man holding a certificate."
+      slot="content"
+      class="w-full h-full max-w-md"
+    />
+  </BasicSection>
+</BaseLayout>
+
+<style is:global>
+  .hero {
+    background-color: rgb(34 20 36);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='72' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%232a1631' fill-opacity='1'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+</style>

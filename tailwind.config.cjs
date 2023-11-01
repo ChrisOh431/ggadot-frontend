@@ -7,8 +7,27 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				serif: ["Inika", ...defaultTheme.fontFamily.serif]
+			},
+			colors: {
+				ggviolet: {
+					primary: "#370E3D",
+					secondary: "#A947B8",
+					tertiary: "#300C35",
+					highlight: "#F3B6FC",
+					dark: "#221424",
+				},
+				ggyellow: {
+					primary: "#FFEEC3",
+					secondary: "#FFE299",
+					tertiary: "#FFDB80",
+					quarternary: "#5C450A",
+					highlight: "#FFF8E5",
+					dark: "#251B04"
+				}
 			}
 		},
 	},
-	plugins: [],
+	plugins: [
+		require('@tailwindcss/typography')
+	],
 }

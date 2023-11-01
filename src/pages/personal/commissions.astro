@@ -1,0 +1,67 @@
+---
+import { useSanityClient } from "@sanity/astro";
+import "@fontsource/inika/400.css";
+import "@fontsource/inika/700.css";
+
+import BasicSection from "../../components/BasicSection.astro";
+import NavBar from "../../components/NavBar.astro";
+import LinkButton from "../../components/LinkButton.astro";
+import BigFooter from "../../components/BigFooter.astro";
+import HeroSection from "../../components/HeroSection.astro";
+import SectionButton from "../../components/SectionButton.astro";
+
+import Icon from "astro-icon";
+
+import { Image } from "astro:assets";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+import services from "../../images/illust/services.svg";
+import sideBySideResumes from "../../images/illust/side-by-side-resumes.svg";
+import influencer from "../../images/illust/influencer.svg";
+import selfPoint from "../../images/illust/self-point-b.svg";
+
+import CenteredSection from "../../components/CenteredSection.astro";
+import ColumnSection from "../../components/ColumnSection.astro";
+
+import steps from "./bespokesteps.json";
+import Step from "../../components/Step.astro";
+import ServicePage from "../../layouts/ServicePage.astro";
+
+const hero = {
+  title: "Commissions",
+  subtitle: "Tailored design, boundless possibilities.",
+  desc: "Looking for that perfect blend of professional art and design without sacrificing the personal touch? You've come to the right place. At Ghost Gadot, we believe that your creative vision deserves the utmost care and attention, no matter how intricate or unique.",
+  cta: "Request a Commission",
+};
+
+type diff = {
+  sectionHeader: string;
+  blocks: [string, string][];
+};
+const ggdiff: diff = {
+  sectionHeader: "What makes our commissions special?",
+  blocks: [
+    [
+      "Digital Illustration",
+      "Bring your concepts to life with our expert digital illustration techniques, tailor-made for every vision.",
+    ],
+    [
+      "Personal & Professional",
+      "Elevate your personal brand or professional profile with our bespoke creations, distinctively designed for ambitious individuals.",
+    ],
+    [
+      "Design & Artistry",
+      "Aesthetics, functionality, or both? We're a collective, so we can able to craft designs and illustrations for any purpose possible.",
+    ],
+  ],
+};
+---
+
+<ServicePage hero={hero} ggdiff={ggdiff}>
+  <style is:global>
+    .hero {
+      background-color: #370e3d;
+      background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23300c35' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+    }
+  </style>
+</ServicePage>

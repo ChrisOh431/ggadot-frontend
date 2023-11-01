@@ -1,0 +1,79 @@
+---
+import Icon from "astro-icon";
+
+interface Props {
+  variant?: "default" | "dark" | "light";
+}
+
+const colorMap = {
+  default: [
+    "bg-ggviolet-tertiary",
+    "text-white",
+    "bg-ggyellow-primary",
+    "text-black",
+    "text-ggyellow-primary",
+  ],
+  dark: [
+    "bg-ggviolet-dark",
+    "text-white",
+    "bg-ggyellow-primary",
+    "text-black",
+    "text-ggyellow-primary",
+  ],
+  light: [
+    "bg-white",
+    "text-black",
+    "bg-ggviolet-primary",
+    "text-white",
+    "text-ggviolet-primary",
+  ],
+};
+
+const { variant = "default" } = Astro.props;
+---
+
+<header
+  class=`flex flex-wrap lg:justify-start lg:flex-nowrap z-50 w-full ${colorMap[variant][0]} text-md py-4`
+>
+  <nav class="w-full mx-auto px-12 flex lg:items-center" aria-label="Global">
+    <a
+      href="/"
+      class=`flex items-center justify-between lg:justify-center min-w-[8rem] ${colorMap[variant][4]}`
+    >
+      <div
+        class=`my-auto w-12 mr-4 aspect-square ${colorMap[variant][2]} rounded-full`
+      >
+      </div>
+      <h1
+        class="my-auto font-serif antialiased font-bold text-xl leading-snug w-min"
+      >
+        GHOST GADOT
+      </h1>
+    </a>
+    <div class="hidden lg:block grow">
+      <div
+        class=`${colorMap[variant][1]} flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-center`
+      >
+        <a class="hover:underline" href="/platforms">Platforms</a>
+        <a class="hover:underline" href="/commercial/services">Commercial Services</a>
+        <a class="hover:underline" href="/personal/services">Personal Services</a>
+        <a class="hover:underline" href="/about">About Us</a>
+      </div>
+    </div>
+    <a
+      href="/contact"
+      class=`h-fit hidden lg:block ${colorMap[variant][2]} ${colorMap[variant][3]} font-semibold px-4 py-1 rounded-lg`
+    >
+      Contact</a
+    >
+    <button
+      type="button"
+      class=`hs-collapse-toggle bg-transparent ${colorMap[variant][4]} lg:hidden ml-auto`
+      data-hs-collapse="#navbar-with-collapse"
+      aria-controls="navbar-with-collapse"
+      aria-label="Toggle navigation"
+    >
+      <Icon pack="bi" name="list" class="w-8 aspect-square" />
+    </button>
+  </nav>
+</header>

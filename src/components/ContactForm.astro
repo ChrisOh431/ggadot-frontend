@@ -1,0 +1,82 @@
+---
+const services = [
+  ["b-bespoke", "Business | Business Bespoke"],
+  ["b-design", "Business | Digital Design & Artistry"],
+  ["p-bespoke", "Personal | Gadot Bespoke"],
+  ["p-hotreq", "Personal | Hot Requests"],
+  ["p-comm", "Personal | Commissions"],
+];
+---
+
+<form
+  action="submit_form.php"
+  method="post"
+  class="text-left text-lg font-bold px-14 py-6">
+  <div class="mb-6 w-full">
+    <label for="name" class="block mb-2 after:content-['_*'] after:text-red-500"
+      >Name</label
+    >
+    <input
+      class="w-full h-12 bg-neutral-100 font-normal px-4 rounded-lg"
+      type="text"
+      id="name"
+      name="name"
+      placeholder="John Doe"
+      required
+    />
+  </div>
+
+  <div class="mb-6 w-full">
+    <label for="email" class="block mb-2 after:content-['_*'] after:text-red-500"
+      >Email</label
+    >
+    <input
+      class="w-full h-12 bg-neutral-100 font-normal px-4 rounded-lg"
+      type="text"
+      id="email"
+      name="email"
+      placeholder="johndoe@gmail.com"
+      required
+    />
+  </div>
+
+  <div class="mb-6 w-full">
+    <label for="company-name" class="block mb-2 font-normal">Company Name</label>
+    <input
+      class="w-full h-12 bg-neutral-100 font-normal px-4 rounded-lg"
+      type="text"
+      id="company-name"
+      name="company-name"
+      placeholder="Ghostbusters Inc."
+    />
+  </div>
+
+  <div class="mb-6 w-full">
+    <label for="service" class="block mb-2 after:content-['_*'] after:text-red-500"
+      >What service do you need?</label
+    >
+    <select
+      id="service"
+      name="service"
+      class="w-full h-12 bg-neutral-100 font-normal px-4 rounded-lg"
+      autocomplete="off"
+      required>
+      <option value="" disabled selected>Select a service.</option>
+      {services.map((service) => <option value={service[0]}>{service[1]}</option>)}
+    </select>
+  </div>
+
+  <div class="mb-6 w-full">
+    <label for="message" class="block mb-2">Message</label>
+    <textarea
+      id="message"
+      name="message"
+      class="w-full h-32 px-6 py-4 bg-neutral-100 font-normal rounded-lg"></textarea>
+  </div>
+
+  <input
+    type="submit"
+    value="Submit"
+    class="px-12 py-1.5 border-2 border-ggyellow-secondary bg-ggyellow-highlight rounded-xl"
+  />
+</form>

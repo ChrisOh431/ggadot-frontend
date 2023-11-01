@@ -1,0 +1,26 @@
+[
+    {
+        "pack": "ic",
+        "iconName": "outline-shopping-cart",
+        "header": "Step 1: Select Your Modules",
+        "content": "We're customer-focused and don't believe in charging you for things you won't need. Our module system lets you have the best solution: a tailor-made brand for your business needs at an optimal price."
+    },
+    {
+        "pack": "ic",
+        "iconName": "outline-handshake",
+        "header": "Step 2: Meet Your New Team",
+        "content": "Our designers, strategists, and project managers will become your trusted partners in this journey. We take the time to understand your enterprise inside and out, ensuring a seamless collaboration that yields exceptional results."
+    },
+    {
+        "pack": "tabler",
+        "iconName": "tools",
+        "header": "Step 3: Workshop Your Brand",
+        "content": "Here's where the magic happens. In a collaborative workshop tailored to your enterprise, we dive deep into your brand's essence, goals, and aspirations and extract the core elements that make your business unique. Together, we define your brand's personality, voice, and visual identity, setting the stage for a design strategy that resonates with your audience."
+    },
+    {
+        "pack": "ion",
+        "iconName": "sparkles-outline",
+        "header": "Step 4: Watch Us Analyze, Revise, & Evolve Your Brand",
+        "content": "Now we embark on a journey of perpetual improvement and innovation for your brand. We don't just stop at creating exceptional designs; we believe in the power of analysis and evolution."
+    }
+]

@@ -1,0 +1,18 @@
+---
+interface Props {
+  destination: string;
+  variant?: "purple" | "yellow";
+}
+const { destination, variant = "purple" } = Astro.props;
+
+const colorStr =
+  variant === "purple"
+    ? "bg-ggviolet-primary text-white border-ggviolet-tertiary hover:bg-white hover:border-ggviolet-secondary hover:text-ggviolet-primary"
+    : "bg-ggyellow-highlight text-black border-ggyellow-secondary hover:bg-white hover:border-ggyellow-tertiary hover:text-ggyellow-dark  "
+---
+
+<a
+  class=`w-full py-2 px-8 text-base lg:w-fit lg:text-lg font-serif font-bold text-center antialiased ${colorStr} rounded-xl border-4 border-transparent cursor-pointer`
+  href={destination}>
+  <slot />
+</a>

@@ -1,0 +1,50 @@
+---
+import { useSanityClient } from "@sanity/astro";
+import "@fontsource/inika/400.css";
+import "@fontsource/inika/700.css";
+import BigFooter from "../components/BigFooter.astro";
+import HeroSection from "../components/HeroSection.astro";
+import NavBar from "../components/NavBar.astro";
+
+interface Props {
+  title?: string;
+  heroBackgroundOverride?: boolean;
+  navVariant?: "default" | "dark" | "light";
+}
+const {
+  title = "Ghost Gadot",
+  heroBackgroundOverride = false,
+  navVariant = "default",
+} = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <NavBar variant={navVariant} />
+
+    <HeroSection backgroundOverride={heroBackgroundOverride}>
+      <slot name="hero" />
+    </HeroSection>
+
+    <slot />
+
+    <BigFooter />
+  </body>
+</html>
+
+<style is:global>
+  @font-face {
+    font-family: "Inika";
+    src: url("/fonts/Inika-Regular.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+</style>

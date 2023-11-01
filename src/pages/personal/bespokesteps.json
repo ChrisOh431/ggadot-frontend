@@ -1,0 +1,26 @@
+[
+    {
+        "pack": "ic",
+        "iconName": "outline-shopping-cart",
+        "header": "Step 1: Select Your Modules",
+        "content": "Our flexible approach allows you to tailor your experience, ensuring you receive precisely the professional development, content creation, and personal branding services you need."
+    },
+    {
+        "pack": "ic",
+        "iconName": "outline-handshake",
+        "header": "Step 2: Meet Your Artist",
+        "content": "Here you'll be matched with a personal artist - the creative force behind your vision. This artist becomes your dedicated collaborator, transforming your aspirations into compelling content and visuals."
+    },
+    {
+        "pack": "tabler",
+        "iconName": "tools",
+        "header": "Step 3: Workshop Your Brand",
+        "content": "In a collaborative workshop designed for you, we dive deep into your values, goals, and personal narrative. Together, we shape a brand that authentically represents you, ensuring your personal brand identity stands out in a crowded world."
+    },
+    {
+        "pack": "ion",
+        "iconName": "sparkles-outline",
+        "header": "Step 4: Watch Us Analyze, Revise, & Evolve Your Brand",
+        "content": "We analyze the impact of your identity, refine it, and continue to adapt to your evolving goals and the changing landscape of your personal development. We embrace the dynamic nature of your personal brand, ensuring it remains a powerful and expanding representation of your authentic self."
+    }
+]

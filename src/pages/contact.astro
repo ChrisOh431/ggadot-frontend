@@ -1,0 +1,72 @@
+---
+import { useSanityClient } from "@sanity/astro";
+import "@fontsource/inika/400.css";
+import "@fontsource/inika/700.css";
+
+import BasicSection from "../components/BasicSection.astro";
+import NavBar from "../components/NavBar.astro";
+import LinkButton from "../components/LinkButton.astro";
+import BigFooter from "../components/BigFooter.astro";
+import HeroSection from "../components/HeroSection.astro";
+import SectionButton from "../components/SectionButton.astro";
+
+import sideBySide from "../images/illust/side-by-side.svg";
+import checks from "../images/illust/checks.svg";
+import certMan from "../images/illust/man-with-cert.svg";
+import { Image } from "astro:assets";
+import ContactForm from "../components/ContactForm.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Ghost Gadot</title>
+  </head>
+  <body>
+    <NavBar variant="dark" />
+    <HeroSection backgroundOverride>
+      <div class="-my-20 w-full">
+        <div
+          class="mx-auto text-5xl lg:text-6xl max-w-full lg:max-w-5xl font-serif font-semibold antialiased leading-tight">
+          <h2 class="">Contact Us</h2>
+          <h3 class="text-2xl font-normal text-ggviolet-highlight">
+            It's quick, easy, and the quote is always free.
+          </h3>
+        </div>
+
+        <div
+          class="py-2 text-black mt-12 mx-auto w-full max-w-4xl bg-white border-4 border-ggyellow-primary rounded-2xl">
+          <ContactForm />
+        </div>
+      </div>
+    </HeroSection>
+
+    <div class="w-full text-center py-12 flex flex-col justify-center items-center gap-8">
+      <div>
+        <h2 class="text-3xl font-serif mb-4">Hate Emails? We've got you.</h2>
+        <h3 class="text-lg">
+          You can get a quicker and more personal response from our Discord community.
+        </h3>
+      </div>
+
+      <SectionButton variant="yellow" destination="">Join Us</SectionButton>
+
+      <div>
+        <h2 class="text-2xl font-serif mb-2">We're always spirited to chat via phone, too:</h2>
+        <h3 class="text-xl">+1 (281)-831-6928</h3>
+      </div>
+    </div>
+
+    <BigFooter />
+  </body>
+</html>
+
+<style is:global>
+  .hero {
+    background-color: #221424;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='245' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%232a1631' fill-opacity='1' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+</style>

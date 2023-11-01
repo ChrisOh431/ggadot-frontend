@@ -1,0 +1,43 @@
+---
+import Icon from "astro-icon";
+import LinkButton from "./LinkButton.astro";
+import FooterButton from "./FooterButton.astro";
+---
+
+<footer class="py-8 flex flex-col justify-center w-full">
+  <div
+    class="flex flex-col lg:flex-row gap-[8vw] justify-center items-center bg-white w-full py-16 px-8"
+  >
+    <div class="text-lg text-[#370E3D] text-center lg:text-left">
+      <h2
+        class="text-2xl lg:text-4xl max-w-[42rem] font-serif antialiased leading-9"
+      >
+        <span class="text-3xl font-bold lg:text-4xl">Let's talk about your project.</span>
+        <br />We won't spook you.
+      </h2>
+      <div class="flex flex-row h-12 gap-6 mt-3 text-black justify-center lg:justify-start">
+        <Icon pack="bi" name="discord" />
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+          ><path
+            fill="currentColor"
+            d="M389.2 48h70.6L305.6 224.2L487 464H345L233.7 318.6L106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42l255.3 333.8z"
+          ></path></svg
+        >
+        <Icon pack="bi" name="instagram" class="p-0.5" />
+        <Icon pack="bi" name="linkedin" class="p-0.5" />
+        <Icon pack="bi" name="envelope" />
+      </div>
+    </div>
+    <div class="h-full gap-4 flex flex-col justify-between">
+      <FooterButton>Contact Us</FooterButton>
+      <FooterButton>Join Our Community</FooterButton>
+    </div>
+  </div>
+  <div
+    class="flex flex-col md:flex-row justify-center align-middle text-center gap-4 md:gap-12"
+  >
+    <p>© 2023 All Rights Pending | Ghost Gadot™, L.L.C.</p>
+    <a class="underline" href="/legal">Terms and Conditions</a>
+    <a class="underline" href="/legal">Privacy Policy</a>
+  </div>
+</footer>

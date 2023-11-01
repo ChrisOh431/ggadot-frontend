@@ -1,0 +1,147 @@
+---
+import { useSanityClient } from "@sanity/astro";
+import "@fontsource/inika/400.css";
+import "@fontsource/inika/700.css";
+
+import BasicSection from "../../components/BasicSection.astro";
+import NavBar from "../../components/NavBar.astro";
+import LinkButton from "../../components/LinkButton.astro";
+import BigFooter from "../../components/BigFooter.astro";
+import HeroSection from "../../components/HeroSection.astro";
+import SectionButton from "../../components/SectionButton.astro";
+
+import Icon from "astro-icon";
+
+import { Image } from "astro:assets";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+import selfPoint from "../../images/illust/self-point.svg";
+import personalPortrait from "../../images/illust/personal-portrait.svg";
+import twoPeopleChart from "../../images/illust/two-ppl-chart.svg";
+import girlDrawing from "../../images/illust/girl-drawing.svg";
+
+import CenteredSection from "../../components/CenteredSection.astro";
+import ColumnSection from "../../components/ColumnSection.astro";
+---
+
+<BaseLayout heroBackgroundOverride={true}>
+  <div
+    slot="hero"
+    class="w-full lg:px-32 -my-16 lg:my-0 text-4xl lg:text-5xl flex flex-col items-center lg:flex-row justify-center lg:justify-between lg:gap-4">
+    <div class="w-fit font-serif text-center lg:text-left lg:max-w-2xl">
+      <h2 class="mb-1.5 font-bold">Personal Artistry & Design Services</h2>
+      <h3 class="mb-3 text-lg lg:text-2xl text-ggviolet-highlight antialiased">
+        Do Things Different
+      </h3>
+      <p
+        class="font-normal text-lg text-center lg:text-left lg:w-3/4 leading-relaxed mb-3">
+        We provide individuals with personal art commissions and branding done by in-house
+        expert service providers. No unethical or external sources, just you and your
+        artist creating something beautiful together.
+      </p>
+      <a
+        href="/contact"
+        class="px-8 py-1.5 border-2 border-ggyellow-secondary bg-ggyellow-highlight rounded-xl text-black font-serif text-lg font-bold antialiased"
+        >Get a Quote</a
+      >
+    </div>
+
+    <Image
+      src={selfPoint}
+      alt="A man pointing to himself."
+      class="w-3/4 lg:w-full lg:h-full lg:-my-64 max-w-sm lg:max-w-md shrink scale-75 lg:scale-100"
+    />
+  </div>
+
+  <ColumnSection sectionTitle="What We Offer">
+    <div class="flex flex-col text-lg text-ggviolet-primary font-bold text-center mx-10">
+      <Icon
+        pack="ic"
+        name="baseline-speed"
+        class="mx-auto w-20 text-yellow-500 opacity-60"
+      />
+       Quick turnaround services
+      <span class="text-base font-normal"
+        >Hot-Requests. Still 100% original & 100% yours.</span
+      >
+    </div>
+    <div class="flex flex-col text-lg text-ggviolet-primary font-bold text-center mx-10">
+      <Icon
+        pack="ic"
+        name="baseline-credit-score"
+        class="mx-auto w-20 text-yellow-500 opacity-60"
+      />
+       Secure & Easy Payment
+      <span class="text-base font-normal">Minimized payment terms, minimized risk.</span>
+    </div>
+    <div class="flex flex-col text-lg text-ggviolet-primary font-bold text-center mx-10">
+      <Icon
+        pack="ic"
+        name="baseline-people-outline"
+        class="mx-auto w-20 text-yellow-500 opacity-60"
+      />
+       Direct Artist Communication
+      <span class="text-base font-normal"
+        >No middle-man between clients and the artist.</span
+      >
+    </div>
+  </ColumnSection>
+
+  <BasicSection
+    background="yellow"
+    sectionTitle="Gadot Bespoke"
+    subtitle="Your Brand. Your Identity. Evolved Monthly."
+    reversed>
+    <p class="text-lg max-w-[32rem]">
+      Yet, maintaining in-house design teams can bleed your budget dry, and
+      non-professional designs are never getting the results you hope. Enter Business
+      Bespoke, a tailor-made subscription service crafted to fit your company like a
+      bespoke suit.
+    </p>
+    <div class="z-10 mt-4 w-full flex flex-col items-center lg:flex-row gap-4">
+      <SectionButton destination="/personal/gadotbespoke">Build Your Brand</SectionButton>
+    </div>
+    <Image
+      src={personalPortrait}
+      alt="A portrait of a person."
+      slot="content"
+      class="w-full h-full max-w-md scale-[2]"
+    />
+  </BasicSection>
+
+  <ColumnSection>
+    <div
+      class="flex flex-col text-4xl text-ggviolet-primary font-bold font-serif items-center gap-2 text-center mx-10 w-1/2 max-w-md">
+      Commissions
+      <span class="text-xl font-normal font-sans text-ggyellow-quarternary"
+        >Get professional art and design done without losing the personal feel.</span
+      >
+      <p class="text-lg font-normal font-sans text-black mb-2">
+        Whether it's a custom artwork, bespoke branding, or a personalized design project,
+        the sky's the limit. We don't just offer solutions; we provide a canvas for your
+        imagination, where every detail is a reflection of your vision.
+      </p>
+      <SectionButton destination="/personal/commissions">Learn More</SectionButton>
+    </div>
+    <div
+      class="flex flex-col text-4xl text-ggviolet-primary font-bold font-serif items-center gap-2 text-center mx-10 w-1/2 max-w-md">
+      Hot Requests
+      <span class="text-xl font-normal font-sans text-ggyellow-quarternary"
+        >Give your vision a shape as fast as possible.</span
+      >
+      <p class="text-lg font-normal font-sans text-black mb-2">
+        With Hot-Requests, there's no need to let your creative ideas simmer on the back
+        burner. We're here to help you turn inspiration into reality as fast as possible.
+        Your vision is our mission, and we're ready to make it happen.
+      </p>
+      <SectionButton destination="/personal/commissions">Learn More</SectionButton>
+    </div>
+  </ColumnSection>
+</BaseLayout>
+
+<style is:global>
+  .hero {
+    background-color: #370e3d;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23300c35' fill-opacity='1'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+</style>

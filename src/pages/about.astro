@@ -1,0 +1,128 @@
+---
+import "@fontsource/inika/400.css";
+import "@fontsource/inika/700.css";
+import BasicSection from "../components/BasicSection.astro";
+import CenteredSection from "../components/CenteredSection.astro";
+import Step from "../components/Step.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+
+import sideBySide from "../images/illust/side-by-side.svg";
+import checks from "../images/illust/checks.svg";
+import certified from "../images/illust/man-with-cert.svg";
+import ArtistCard from "../components/ArtistCard.astro";
+---
+
+<BaseLayout>
+  <div slot="hero" class="text-4xl lg:text-5xl lg:max-w-5xl -my-4 lg:-my-12">
+    <h2 class="font-serif font-semibold antialiased leading-relaxed">
+      You've never met a collective like us before.
+    </h2>
+    <h3
+      class="text-xl lg:text-2xl font-serif font-normal antialiased leading-tight text-ggviolet-highlight mb-2">
+      Pinky promise.
+    </h3>
+  </div>
+
+  <section class="bg-ggviolet-primary pt-12 lg:pt-24 px-0 lg:px-24 w-full">
+    <h2
+      class="antialiased text-center lg:text-left text-3xl lg:text-4xl text-white font-serif font-bold mb-2">
+      The Gadot Mission
+    </h2>
+
+    <div
+      class="antialiased mt-8 px-8 py-12 lg:px-24 lg:py-16 font-serif text-2xl lg:text-3xl bg-white rounded-t-2xl">
+      <p>
+        We do what we do because we believe in the artists' potential. We believe in their
+        dreams, in their resilience, and in their capacity to mold the world around us
+        with their creativity.
+      </p>
+      <br />
+      <p>
+        We exist to provide a platform that fosters growth, nurtures talent, and paves the
+        way for a more inclusive and accessible art community.
+      </p>
+      <br />
+      <p class="text-ggviolet-primary font-bold underline antialiased">
+        Because every artist deserves a chance, every idea deserves to be heard, and every
+        creative impulse deserves to be nurtured.
+      </p>
+    </div>
+  </section>
+
+  <div
+    class="bg-white py-12 lg:py-24 px-12 lg:px-16 flex flex-col justify-center items-center align-middle gap-y-4 lg:gap-[2vw] w-full">
+    <h2
+      class="text-2xl lg:text-3xl font-serif font-bold antialiased text-center leading-relaxed">
+      We innovate in ways that separate us from the rest. <br /> Here's how:
+    </h2>
+
+    <div class="max-w-full lg:max-w-2xl mx-8">
+      <Image
+        src={sideBySide}
+        alt="2 people side by side."
+        slot="content"
+        class="w-full h-full mx-auto max-w-md"
+      />
+      <h3 class="text-3xl font-serif font-bold">Collective</h3>
+      <p class="text-lg">
+        Ghost Gadot's Collective is not merely a grouping of talented artists but a
+        cohesive, innovative community that emphasizes shared success, ethical practices,
+        continuous learning, and meaningful engagement. Our approach redefines what an
+        artist collective can be, positioning us as a leader in the industry.
+      </p>
+    </div>
+
+    <div class="max-w-full lg:max-w-2xl mx-8">
+      <Image
+        src={checks}
+        alt="A man using a laptop. Three checkmarks are placed above him"
+        slot="content"
+        class="w-full h-full mx-auto max-w-md"
+      />
+      <h3 class="text-3xl font-serif font-bold">Brokerage</h3>
+      <p class="text-lg leading-relaxed">
+        Ghost Gadot's Brokerage redefines the traditional brokerage model by intertwining
+        it with a collective ethos, emphasizing ethical practices, quality assurance,
+        community engagement, and personalized support. Our approach offers a
+        comprehensive and satisfying experience for both artists and clients, setting a
+        new standard in the digital design industry.
+      </p>
+    </div>
+
+    <div class="max-w-full lg:max-w-2xl mx-8">
+      <Image
+        src={certified}
+        alt="A man holding a certification"
+        slot="content"
+        class="w-full h-full mx-auto max-w-md"
+      />
+      <h3 class="text-3xl font-serif font-bold">Collective</h3>
+      <p class="text-lg">
+        Ghost Gadot's Collective is not merely a grouping of talented artists but a
+        cohesive, innovative community that emphasizes shared success, ethical practices,
+        continuous learning, and meaningful engagement. Our approach redefines what an
+        artist collective can be, positioning us as a leader in the industry.
+      </p>
+    </div>
+  </div>
+
+  <div class="bg-ggviolet-primary py-12 lg:py-24 px-12 lg:px-16 w-full">
+    <h2
+      class="text-2xl lg:text-3xl font-serif font-bold antialiased leading-relaxed text-ggviolet-highlight">
+      Here are the people who make everything possible.
+    </h2>
+
+    <div class="w-full px-32 py-16 mx-auto flex lg:flex-row gap-4 flex-wrap justify-center">
+      <ArtistCard/>
+      <ArtistCard/>
+      <ArtistCard/>
+      <ArtistCard/>
+    </div>
+  </div>
+
+  <style is:global>
+    .hero {
+    }
+  </style>
+</BaseLayout>
